@@ -6,7 +6,7 @@ body {
     background-color: #def2f1;
 }
 
-.card-panel {
+.card-panel, .card {
     background-color: #3aafa9;
 }
 

@@ -1,84 +1,23 @@
 {% extends "base.html"%}
 {% block content%}
 
-    {% for review in reviews %}
-        {{ review.game_name }} <br>
-        {{ review.game_review }} <br>
-        {{ review.game_price }} <br>
-        {{ review.game_link }} <br>
-        {{ review.game_rating }} <br>
-    {% endfor %}
-
       <div class="row">
         <div class="col s12">
           <div class="card">
+            {% for review in reviews %}
             <div class="card-image">
               <img src="https://img.mensxp.com/media/content/2020/Nov/News-Channel-Used-Screenshot-From-Red-Dead-Redemption-2-1400x653_5fc0a8c1d583b_600x280.jpeg">
-              <span class="card-title">Card Title</span>
+              <span class="card-title"> {{ review.game_name }} </span>
             </div>
             <div>
                 <ul class="collapsible ul-style">
                     <li>
-                      <div class="collapsible-header"><i class="fas fa-gamepad"></i>First</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      <div class="collapsible-header"><i class="fas fa-gamepad"></i>Reviewed by {{ username }} </div>
+                      <div class="collapsible-body">
+                          <p>{{ review.game_review }}</p>
+                      </div>
                     </li>
-                </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://img.mensxp.com/media/content/2020/Nov/News-Channel-Used-Screenshot-From-Red-Dead-Redemption-2-1400x653_5fc0a8c1d583b_600x280.jpeg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div>
-                <ul class="collapsible ul-style">
-                    <li>
-                      <div class="collapsible-header"><i class="fas fa-gamepad"></i>First</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://img.mensxp.com/media/content/2020/Nov/News-Channel-Used-Screenshot-From-Red-Dead-Redemption-2-1400x653_5fc0a8c1d583b_600x280.jpeg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div>
-                <ul class="collapsible ul-style">
-                    <li>
-                      <div class="collapsible-header"><i class="fas fa-gamepad"></i>First</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://img.mensxp.com/media/content/2020/Nov/News-Channel-Used-Screenshot-From-Red-Dead-Redemption-2-1400x653_5fc0a8c1d583b_600x280.jpeg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div>
-                <ul class="collapsible ul-style">
-                    <li>
-                      <div class="collapsible-header"><i class="fas fa-gamepad"></i>First</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
+            {% endfor %}
                 </ul>
             </div>
           </div>

@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-gamepad prefix"></i>
-                    <input id="game_name" name="game_name" 
+                    <input id="game_name" name="game_name" value="{{ review.game_name }}" 
                         pattern="^[a-zA-Z0-9]{3,30}" type="text" class="validate" required>
                     <label for="game_name" class="white-text">Game Name</label>
                 </div>
@@ -17,11 +17,14 @@
                 <div class="input-field col s12">
                     <i class="fas fa-edit prefix"></i>
                     <textarea id="game_review" name="game_review" class="materialize-textarea validate" 
-                        minlength="10" maxlength="250" required></textarea>
+                        minlength="10" maxlength="250" required>{{ review.game_review }}</textarea>
                     <label for="game_review" class="white-text">Game review</label>
                 </div>
                 <div class="row">
                     <div class="col s12 center-align">
+                        <a href="{{ url_for('get_reviews') }}" class="btn-large">
+                            Cancel
+                        </a>
                         <button type="submit" class="btn-large">
                             Finish Edit
                         </button>

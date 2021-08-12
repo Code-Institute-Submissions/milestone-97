@@ -99,7 +99,6 @@ def add_review():
         mongo.db.reviews.insert_one(review)
         flash("Your Review has been added!")
         return redirect(url_for("get_reviews"))
-        
     return render_template("add_review.html")
 
 

@@ -11,7 +11,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME") 
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
@@ -38,15 +38,21 @@ def register():
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
-        }  
-        mongo.db.users.insert_one(register)      
+        }
+        mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
         flash("Congratulations, you're registered!")
-    return render_template("register.html")    
+    return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method 
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)    
+            debug=True)

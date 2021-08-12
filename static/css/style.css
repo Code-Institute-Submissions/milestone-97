@@ -30,3 +30,7 @@ body {
 .helper-text:after {
     color: #def2f1 !important;
 }    
+
+p a {
+    color: #3aafa9;
+}

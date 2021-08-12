@@ -22,3 +22,11 @@ body {
     line-height: 2;
     background-color: #3aafa9;
 }
+
+.helper-text {
+    text-transform: uppercase;
+}
+
+.helper-text:after {
+    color: #def2f1 !important;
+}    

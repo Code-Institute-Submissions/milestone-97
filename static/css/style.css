@@ -6,7 +6,7 @@ body {
     background-color: #def2f1;
 }
 
-.register-panel {
+.register-panel, .profile-panel {
     background-color: #3aafa9;
 }
 

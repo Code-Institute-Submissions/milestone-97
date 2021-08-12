@@ -36,21 +36,27 @@ p a {
 }
 
 .test {
-    background-image: url(https://img.mensxp.com/media/content/2020/Nov/News-Channel-Used-Screenshot-From-Red-Dead-Redemption-2-1400x653_5fc0a8c1d583b_600x280.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: static;
-    background-position-x: 100%;
-    background-position-y: 100%;
+    background-color: #def2f1;
+    border: 0;
 }
 
 .ul-style {
     margin-top: 0;
     color: #def2f1;
     border: 0;
+    background-color: #2b7a78;
 }
 
-.collapsible-header, .collapsible-body{
+.collapsible-header, .collapsible-body {
     background-color: #2b7a78;
     border: 0;
+}
+
+.collapsible {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.btn-small, .btn-large {
+    background-color: #17252A;
 }

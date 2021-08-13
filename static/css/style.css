@@ -9,31 +9,20 @@ body {
     flex-direction: column;
 }
 
-main {
-    flex: 1 0 auto;
-  }
-
 .card-panel, .card {
     background-color: #3aafa9;
 }
 
-.register-button {
-    background-color: #2b7a78;
-}
-
+/* nav bar */
 .nav {
     background-color: #17252A;
 }
-
-.page-footer {
-    background-color: #17252A;
-}
-
+/* Flashes */
 .flashes h4 {
     line-height: 2;
     background-color: #3aafa9;
 }
-
+/* helper text */
 .helper-text {
     text-transform: uppercase;
 }
@@ -41,12 +30,12 @@ main {
 .helper-text:after {
     color: #def2f1 !important;
 }    
-
+/*  */
 p a {
     color: #3aafa9;
 }
-
-.test {
+/* reviews */
+.rev {
     background-color: #def2f1;
     border: 0;
 }
@@ -67,7 +56,19 @@ p a {
     box-shadow: none;
     -webkit-box-shadow: none;
 }
-
+/* buttons */
 .btn-small, .btn-large {
     background-color: #17252A;
 }
+
+.register-button {
+    background-color: #2b7a78;
+}
+/* footer */
+.page-footer {
+    background-color: #17252A;
+}
+
+main {
+    flex: 1 0 auto;
+  }

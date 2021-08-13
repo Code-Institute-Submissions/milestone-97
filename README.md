@@ -1,7 +1,3 @@
-For admin testing
-username:theadmin
-pass:theadmin
-
 # Game review
 
 My project is a video game review site. All of my milestone projects so far have been video game related so i thought best to continue the tradition.

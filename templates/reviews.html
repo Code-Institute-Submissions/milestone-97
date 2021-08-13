@@ -28,7 +28,7 @@
             {% for review in reviews %}
             <div class="card-image">
               <img src="../static/images/game-review-hero.png">
-              <span class="card-title"> {{ review.game_name }} </span>
+              <span class="cardtitle"> {{ review.game_name }} </span>
             </div>
             <div class="test">
                 <ul class="collapsible ul-style">
@@ -46,6 +46,8 @@
                         </div>
                         <div class="collapsible-body">
                             <p>{{ review.game_review }}</p>
+                            <p>Price: {{ review.game_price }}</p>
+                            <p>Rating: {{ review.game_rating }}</p>
                         </div>
                     </li>
             

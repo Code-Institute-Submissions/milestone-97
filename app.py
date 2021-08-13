@@ -101,7 +101,9 @@ def add_review():
         review = {
             "game_name": request.form.get("game_name"),
             "game_review": request.form.get("game_review"),
-            "reviewed_by": session["user"],
+            "game_price": request.form.get("game_price"),
+            "game_rating": request.form.get("game_rating"),
+            "reviewed_by": session["user"]
         }
         mongo.db.reviews.insert_one(review)
         flash("Your Review has been added!")
@@ -115,7 +117,9 @@ def edit_review(review_id):
         submit = {
             "game_name": request.form.get("game_name"),
             "game_review": request.form.get("game_review"),
-            "reviewed_by": session["user"],
+            "game_price": request.form.get("game_price"),
+            "game_rating": request.form.get("game_rating"),
+            "reviewed_by": session["user"]
         }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
         flash("Your Review has been updated!")

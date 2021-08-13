@@ -21,6 +21,22 @@
                     <label for="game_review" class="white-text">Game review</label>
                 </div>
                 <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-euro-sign prefix"></i>
+                        <input id="game_price" name="game_price" value="{{ review.game_price }}"
+                            minlength="2" maxlength="30" type="text" class="validate" required>
+                        <label for="game_price" class="white-text">Game Price</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-sort-numeric-up-alt prefix"></i>
+                        <input id="game_rating" name="game_rating" value="{{ review.game_rating }}"
+                            minlength="2" maxlength="30" type="text" class="validate" required>
+                        <label for="game_rating" class="white-text">Game Rating (out of 5)</label>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col s12 center-align">
                         <a href="{{ url_for('get_reviews') }}" class="btn-large">
                             Cancel

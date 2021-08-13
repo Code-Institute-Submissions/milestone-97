@@ -1,104 +1,237 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Game review
 
-Welcome Robertl231,
+My project is a video game review site. All of my milestone projects so far have been video game related so i thought best to continue the tradition.
+the goal of this site is for users to be able to come to the site and leave a review on any video game that they would like. any user that visits 
+this site shpuld be able to read others reviews, post their own, edit their own and delete their own reviews.
+ 
+## UX
+### Targeted User
+* This website is targeted at gamers that want to either leave reviews on games or read them.
+* Ideally People above the age of 18.
+* People who love to share their opinion with others.
+* people who love to read other peoples opinions.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+### User Story
+1. As a new user to this Website, I want to easily navigate the website so i can find 
+the information i need.
+2. As a new user to this Website, I want important information visible to me when i load up the 
+website initially.
+3. As a new user to this Website, Iwant to be able to imediately read a review.
+4. As a new user to this Website, I want to be able to easily register an account.
+5. As a new user to this Website, I want to be able to create my own reviews as well as edit
+them or delete them. 
+6. As a new user to this Website, I want to know the price of the games that are being reviewed.
 
-## Gitpod Reminders
+### Wireframes
+My wireframe is stored in my repository in a folder named "wireframe".
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Features
+* This is a multi page website
+* The page is also reponsive.
+* Users are able to register an account on the site.
+* Users are able to log in and log out of the site.
+* Users are able tpo leave a video game review. 
+* It is possible for users to edit and delete their own reviews.
 
-`python3 -m http.server`
+### Features Left to Implement
+* A feature I would like to implement in the future would be letting the users choose their own image for on
+top of their review or even on their profile page.
 
-A blue button should appear to click: _Make Public_,
+## Technologies Used
+* This website uses HTML programming language.
+* This website uses CSS programming language.
+* This website uses Python programming language.
+* This website uses JavaScript
+* This website uses jQuery
+* This website uses a flask Framework
+* This website uses MongoDB
+* This website uses jinja
+* This website uses PyMongo
+* This website uses Flask PyMongo
+* This website uses materialize CDN. materialize was used to ensure a responsive and consistent 
+website.
+* This website uses Font Awesome. [https://fontawesome.com/] 
+* This website also uses Heroku to publish the site.
 
-Another blue button should appear to click: _Open Browser_.
+## Testing
+W3C Markup Validation ans W3C CSS Validation were used to validate the code of the website.
+* [https://validator.w3.org/]
+* [https://jigsaw.w3.org/css-validator/]
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+### Testing User Stories
+1. As a new user to this Website, I want to easily navigate the website so i can find 
+the information i need.
+* This Site features a navbar that brings you everywhere on the site.
+* Page layout is very simple for a user to understand quickly
+* When hovering over any buttons they will change colour to inform the user they are on a button, button 
+colour will revert when user not hovering on the button.
 
-Another blue button should appear to click: _Open Browser_.
+2. As a new user to this Website, I want important information visible to me when i load up the 
+website initially.
+* On page load there is a search bar.
+* Reviews from other users are imdediately available to read.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+3. As a new user to this Website, I want to be able to imediately read a review.
+* On Page load, there is reviews available to the user imediately.
 
-To log into the Heroku toolbelt CLI:
+4. As a new user to this Website, I want to be able to easily register an account.
+* On the navbar there is a button that brings you the registration page.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+5. As a new user to this Website, I want to be able to create my own reviews as well as edit
+them or delete them.   
+* Once the user is registered they are able to make a review from the button on the navbar, the can then edit their
+review after it is published onto the home page.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+6. As a new user to this Website, I want to know the price of the games that are being reviewed.
+* In each review users are required to provide a price for the video game they are reviewing.
 
-------
+### Manually testing functionality of the website
+#### Home Page:
+1. Navbar / Sidenav:
+* Go to the homepage with a desktop screen size
+* Make sure all buttons are showing for when user is not logged in.
+* Ensure that all button perform the correct task
+* Change screen size from desktop to tablet checking responsiveness of the navbar.
+* Change screen size from tablet to mobile and repeat the above step. 
+* Repeat these steps again using a mobile device and a tablet.
+* Repeat these steps with a logged in user.
+* Repeat these steps on every page of the site.
 
-## Release History
+2. Search Bar:
+* Go to the homepage with a desktop screen size
+* Attempt to search for a review.
+* Attempt to reset the page.
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+3. Reviews:
+* Go to the homepage with a desktop screen size
+* Ensure name of came is being shown just below its image.
+* Ensure the accordian is working when clicked on.
+* When accordian is clicked ensure correct content is revealed.
+* Change screen size from desktop to tablet to make sure the all content responds properly.
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+4. Footer:
+* Go to the homepage with a desktop screen size
+* click on all available links.
+* Change screen size from desktop to tablet to make sure the all content responds properly and
+that there is no overflow issues with padding or margins.
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
+* Repeat these steps on every page of the site.
+ 
+#### Register Page:
+1.Form
+* Ensure user can only enter 8-15 characters and alphanumeric character into both
+the username and password fields.
+* Ensure when wrong characters are entered the form informs the user.
+* When user clicks register ensure the correct flash message appears.
+* Ensure link below form also works.
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### Log In Page:
+1.Form
+* Ensure user can only enter 8-15 characters and alphanumeric character into both
+the username and password fields.
+* Ensure when wrong characters are entered the form informs the user.
+* When user clicks Log in ensure the correct flash message appears.
+* Ensure button works.
+* Ensure link below form also works.
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### New Review Page:
+1.Form
+* Ensure user has to fill ever part of the form
+* Ensure button works.
+* When user clicks Log in ensure the correct flash message appears.
+* When user clicks Log in ensure user is brought to the correct location.
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### Manage Page:
+1.
+* Ensure all user reviews are present on the screen.
+* Ensure only "theadmin" can arive at this page.
+* Ensure all buttons work correctly
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### Edit ReviewPage:
+1.
+* Ensure user has to fill all parts of the form
+* Ensure cancel button returns user to homepage
+* Ensure finish edit button actually edits the review
+* Ensure only the user who made the review can edit it, besides the admin.
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### 404 Page:
+1.
+* Ensure when invalid link is searched that user is brought to custom 404 page
+* Change screen size from tablet to mobile and repeat the above step.
+* Repeat these steps again using a mobile device and a tablet.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### More Testing
+1. Asked my family and friends to look at the site to see if they could find any bugs. 
+(This happened after I had done all my own testing, no bugs were found by them)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Deployment
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### This project was deployed using Heruko using github repositories
+1. Ensure your project dependencies and requirements are included in a requirements.txt file
+in your project folder.
+2. To complete this you will need to enter the following code into your terminal
+"pip3 freeze --local > requirements.txt"
+3. Create a Procfile by typing the following command into your terminal
+"echo web: python app.py > Procfile"
+4. Commit and push these changes to your repository
+5. Create and acccount on Heroku 
+6. Once logged in select new the create new app.
+7. Create a project name that is completely unique and select your region
+8. Click on the option that will connect you directly to your github acount
+9. Ensure it is your account that is displayed and then search for your project.
+10. After this Input all of your config vars in the settings tab.
+11. You may now go back to the deploy tab and "Enabe automatic deploy"
+12. Then click deploy branch just underneath.
+13. Your app shpuld start to build and within a few moments youll be given an 
+option to view what you deployed.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### How to run this project locally
+You will need a Github account and a browser (chrome)
+1. Install the gitpod chrome extension to your browser. 
+[https://www.gitpod.io/docs/browser-extension/]
+2. After installation, go to github.com and find this project repository.
+[https://github.com/Robertl231/milestone-3] 
+3. Click on the green "Gitpod Button" in the top right above the repository.
+4. Once this is done the site will create a new workspace for this project.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+## Credits
 
-## FAQ about the uptime script
+### Content
+All Content is my own unless stated otherwise here or in the form of comments in the html 
+code
 
-**Why have you added this script?**
+* My project was massively helped along by the task manager mini project, I did my best to customise the code so that it
+represented me as best as i could. I think I did a good job in making it my own and showing my understanding of the code written. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Dificulties I ran into
+The biggest difficulty i seem to have is when it comes to indentations, spacings, spelling mistakes or just simply overlooking pieces of code.
+I seem to spend hours on the these things and i feel it's something i really need to improve on going forward, im sure with the more i practice the more
+it all becomes a force of habit.
 
-**How will this affect me?**
+### Media
+#### The images used in this site were obtained from sources listed below:
+1. game-review-hero.png
+https://waylandstudentpress.com/94654/ae/video-game-review-hades/
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Acknowledgements
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+I would like to thank my Mentor Miguel for all his help and guidance, aswell as my friends and family

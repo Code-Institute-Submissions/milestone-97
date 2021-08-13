@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
-
+# connect too database
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -17,24 +17,25 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+#brings us to the home page / review page
 @app.route("/")
 @app.route("/get_reviews")
 def get_reviews():
     reviews = list(mongo.db.reviews.find())
     return render_template("reviews.html", reviews=reviews)
 
-
+#allows user to search for reviews within the site
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
     return render_template("reviews.html", reviews=reviews)
 
-
+#allows user to register a profile
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+        #checks for existing user
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -62,6 +63,7 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
+            # checks hashed password matches user input
             if check_password_hash(
                existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
@@ -69,6 +71,7 @@ def login():
                     request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
             else:
+                #lets user know that either the password or username is incorrect
                 flash("Sorry! That's the incorrect Username and/or Password")
                 return redirect(url_for("login"))
         else:
@@ -87,14 +90,14 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-
+#removes user from session cookie
 @app.route("/logout")
 def logout():
     flash("You are now logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
-
+#allows user to add a review to site/db
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     if request.method == "POST":
@@ -110,7 +113,7 @@ def add_review():
         return redirect(url_for("get_reviews"))
     return render_template("add_review.html")
 
-
+#users may edit their own reviews
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":

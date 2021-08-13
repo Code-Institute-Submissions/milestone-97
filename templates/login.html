@@ -2,7 +2,7 @@
 {% block content %}
 
     <h2 class="center-align">Log In <i class="fas fa-signature"></i></h2>
-
+<!-- username login -->
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel register-panel">
@@ -14,7 +14,7 @@
                       <span class="helper-text" data-error="wrong" data-success="right">8-15 Char. Alphanumeric</span>
                     </div>
                 </div> 
-                
+                <!-- password login -->
                 <div class="row">
                     <div class="input-field col s6">
                       <i class="fas fa-key prefix "></i>
@@ -22,7 +22,8 @@
                       <label for="password" class="white-text">Password</label>
                       <span class="helper-text" data-error="wrong" data-success="right">8-15 Char. Alphanumeric</span>
                     </div>
-                  </div>  
+                  </div>
+                  <!-- login button -->  
                   <div class="row">
                         <button type="submit" class="col s12 btn-large text-shadow register-button">
                           Log In! 
@@ -32,7 +33,7 @@
             </div>
         </form>
     </div>
-
+<!-- link to register an account -->
     <div class="row">
       <div class="col s12">
         <p class="center-align">

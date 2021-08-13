@@ -2,7 +2,7 @@
 {% block content %}
 
     <h2 class="center-align">Register here  <i class="fas fa-signature"></i></h2>
-
+<!-- register username -->
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
@@ -14,7 +14,7 @@
                       <span class="helper-text" data-error="wrong" data-success="right">8-15 Char. Alphanumeric</span>
                     </div>
                 </div> 
-                
+                <!-- register password -->
                 <div class="row">
                     <div class="input-field col s6">
                       <i class="fas fa-key prefix "></i>
@@ -23,6 +23,7 @@
                       <span class="helper-text" data-error="wrong" data-success="right">8-15 Char. Alphanumeric</span>
                     </div>
                   </div>  
+                  <!-- register ubutton -->
                   <div class="row">
                         <button type="submit" class="col s12 btn-large text-shadow register-button">
                           Register Now! 
@@ -32,7 +33,7 @@
             </div>
         </form>
     </div>
-
+<!-- button to login -->
     <div class="row">
       <div class="col s12">
         <p class="center-align">

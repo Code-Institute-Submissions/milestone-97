@@ -2,7 +2,7 @@
 {% block content%}
 
       <h3 class="center-align">All Game Reviews</h3>
-
+<!-- search index -->
       <div class="row">
           <form action="{{ url_for('search') }}" method="post" class="col s12">
               <div class="row valign-wrapper center_align">
@@ -20,7 +20,7 @@
               </div>
           </form>
       </div>
-
+<!-- Game review -->
       {% if reviews|length > 0 %}
       <div class="row">
         <div class="col s12">

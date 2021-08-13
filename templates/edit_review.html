@@ -4,6 +4,7 @@
     <h3 class="center-align review-header">Edit your Review!</h3>
 
     <div class="row card-panel">
+        <!-- game name -->
         <form class="col s12" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
             <div class="row">
                 <div class="input-field col s12">
@@ -13,6 +14,7 @@
                     <label for="game_name" class="white-text">Game Name</label>
                 </div>
             </div>
+            <!-- game review -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-edit prefix"></i>
@@ -20,6 +22,7 @@
                         minlength="10" maxlength="250" required>{{ review.game_review }}</textarea>
                     <label for="game_review" class="white-text">Game review</label>
                 </div>
+                <!-- game price -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-euro-sign prefix"></i>
@@ -28,6 +31,7 @@
                         <label for="game_price" class="white-text">Game Price</label>
                     </div>
                 </div>
+                <!-- game rating -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-sort-numeric-up-alt prefix"></i>
@@ -36,6 +40,7 @@
                         <label for="game_rating" class="white-text">Game Rating (out of 5)</label>
                     </div>
                 </div>
+                <!-- cancel abd finish edit buttons -->
                 <div class="row">
                     <div class="col s12 center-align">
                         <a href="{{ url_for('get_reviews') }}" class="btn-large">
